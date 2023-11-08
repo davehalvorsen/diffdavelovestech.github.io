@@ -1,1 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-07T15:12:36-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dave Loves Tech</title><subtitle>This is a temporary description!</subtitle><entry><title type="html">Hello World!</title><link href="http://localhost:4000/hello/2023/11/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Hello World!" /><published>2023-11-07T14:36:06-08:00</published><updated>2023-11-07T14:36:06-08:00</updated><id>http://localhost:4000/hello/2023/11/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/hello/2023/11/07/welcome-to-jekyll.html"><![CDATA[<p>Hello World!</p>]]></content><author><name></name></author><category term="Hello" /><summary type="html"><![CDATA[Hello World!]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-07T23:05:41-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dave Loves Tech</title><subtitle>This is a temporary description!</subtitle><entry><title type="html">Setting Up a Serial Connection</title><link href="http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Setting Up a Serial Connection" /><published>2023-11-07T14:36:06-08:00</published><updated>2023-11-07T14:36:06-08:00</updated><id>http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll.html"><![CDATA[<h1 id="connecting-the-console-cable">Connecting the Console Cable</h1>
+<p>The picture below is from the Sophos documentation for setting up a serial connection with a console cable to a firewall<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Sophos Labeled Ports.PNG" alt="Sophos Labeled Ports" /></p>
+
+<p>I have used a USB to RJ45 Console Cable to connect the Console port to my computer.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/USB Console Cable.jpg" alt="USB Console Cable" /></p>
+
+<h1 id="determing-com-port-number">Determing COM Port Number</h1>
+<p>The PuTTY Configuration settings will require the COM Port number. This information can be found within Device Manager &gt; Ports. It is the COM Port number associated with the USB-to-Serial Comm Port device.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Device Manager.PNG" alt="Device Manager" /></p>
+
+<h1 id="putty-configuration">PuTTY Configuration</h1>
+<p>9600 is a common Baud Speed, but it is important to check the documentation for the device that you are trying to connect to. In my case, the Sophos XG 135w Firewall uses a Baud Speed of 38400<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting Name</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COM Port Number</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Baud Speed</td>
+      <td>38400</td>
+    </tr>
+    <tr>
+      <td>Data bits</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Stop bits</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Parity</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Flow Control</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Also, the default Flow Control setting for my PuTTY instance was XON/XOFF and I needed to update that to “None” as per the documentation. Outside of that the default PuTTY settings did not need to be changed.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/PuTTY Serial Configuration.PNG" alt="PuTTY Serial Configuration" /></p>
+
+<h1 id="checking-network-settings">Checking Network Settings</h1>
+<p>The screenshot below is of the current Network Settings for this device. This Sophos was recently reset, so I was able to sign in with the default admininistrator password of “admin”. From there, I made the selection of Network Configuration &gt; Interface Configuration to get the screenshot.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Firewall Network Settings.PNG" alt="Firewall Network Settings" /></p>
+
+<h4 id="references">References</h4>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://support.sophos.com/support/s/article/KB-000035769?language=en_US">Sophos Firewall: Set up a serial connection with a console cable</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="Firewall" /><summary type="html"><![CDATA[Connecting the Console Cable The picture below is from the Sophos documentation for setting up a serial connection with a console cable to a firewall1. [Sophos Firewall: Set up a serial connection with a console cable][link-name] &#8617;]]></summary></entry></feed>
