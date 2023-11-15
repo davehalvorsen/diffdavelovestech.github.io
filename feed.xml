@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-07T23:05:41-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dave Loves Tech</title><subtitle>This is a temporary description!</subtitle><entry><title type="html">Setting Up a Serial Connection</title><link href="http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Setting Up a Serial Connection" /><published>2023-11-07T14:36:06-08:00</published><updated>2023-11-07T14:36:06-08:00</updated><id>http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/firewall/2023/11/07/welcome-to-jekyll.html"><![CDATA[<h1 id="connecting-the-console-cable">Connecting the Console Cable</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-14T21:57:39-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dave Loves Tech</title><subtitle>This is a temporary description!</subtitle><entry><title type="html">Installing Windows 2016 on a Dell PowerEdge R530</title><link href="http://localhost:4000/windows/server/2023/11/10/server-2016-R530.html" rel="alternate" type="text/html" title="Installing Windows 2016 on a Dell PowerEdge R530" /><published>2023-11-10T13:38:00-08:00</published><updated>2023-11-10T13:38:00-08:00</updated><id>http://localhost:4000/windows/server/2023/11/10/server-2016-R530</id><content type="html" xml:base="http://localhost:4000/windows/server/2023/11/10/server-2016-R530.html"><![CDATA[<h1 id="citation-example">Citation Example</h1>
+<p><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<h1 id="picture-example">Picture Example</h1>
+<p><img src="/assets/Basic-1841-Config/1841-hostname.PNG" alt="1841-hostname" /></p>
+
+<h1 id="reference-example">Reference Example</h1>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://WEBSITE_ADDRESS.COM">NAME OF TITLE</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="Windows" /><category term="Server" /><summary type="html"><![CDATA[Citation Example 1 [NAME OF TITLE][link-name] &#8617;]]></summary></entry><entry><title type="html">Sophos XG 135w Configuration</title><link href="http://localhost:4000/networking/2023/11/09/sophos-xg-135-config-copy.html" rel="alternate" type="text/html" title="Sophos XG 135w Configuration" /><published>2023-11-09T13:38:00-08:00</published><updated>2023-11-09T13:38:00-08:00</updated><id>http://localhost:4000/networking/2023/11/09/sophos-xg-135-config%20copy</id><content type="html" xml:base="http://localhost:4000/networking/2023/11/09/sophos-xg-135-config-copy.html"><![CDATA[]]></content><author><name></name></author><category term="Networking" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Cisco 2960 Switch Configuration</title><link href="http://localhost:4000/networking/2023/11/09/cisco-2960-configuration.html" rel="alternate" type="text/html" title="Cisco 2960 Switch Configuration" /><published>2023-11-09T13:38:00-08:00</published><updated>2023-11-09T13:38:00-08:00</updated><id>http://localhost:4000/networking/2023/11/09/cisco-2960-configuration</id><content type="html" xml:base="http://localhost:4000/networking/2023/11/09/cisco-2960-configuration.html"><![CDATA[]]></content><author><name></name></author><category term="Networking" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Cisco 1841 Router Configuration</title><link href="http://localhost:4000/networking/2023/11/09/cisco-1841-configuration-copy-2.html" rel="alternate" type="text/html" title="Cisco 1841 Router Configuration" /><published>2023-11-09T13:38:00-08:00</published><updated>2023-11-09T13:38:00-08:00</updated><id>http://localhost:4000/networking/2023/11/09/cisco-1841-configuration%20copy%202</id><content type="html" xml:base="http://localhost:4000/networking/2023/11/09/cisco-1841-configuration-copy-2.html"><![CDATA[<p>I followed instructions I found for doing this in a Spiceworks How-to article<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. The instructions were missing the initial “enable” command, I needed to change the router IP to my router’s IP, and there was also a typo of “access list” instead of “access-list”. All of the screenshots are from completing this in my home lab, but I was just following someone’s instructions. This is just a start though, so expect to see some real home grown IT lab content in the future!</p>
+
+<h1 id="setting-a-hostname">Setting a Hostname</h1>
+
+<p><img src="/assets/Basic-1841-Config/1841-hostname.PNG" alt="1841-hostname" /></p>
+
+<h1 id="creating-wan-and-lan-interfaces">Creating WAN and LAN Interfaces</h1>
+
+<p><img src="/assets/Basic-1841-Config/1841-wan-and-lan-settings.PNG" alt="1841-wan-and-lan-settings" /></p>
+
+<h1 id="routing-table">Routing Table</h1>
+
+<p><img src="/assets/Basic-1841-Config/1841-default-route.PNG" alt="1841-default-route" /></p>
+
+<p><img src="/assets/Basic-1841-Config/laptop-has-apipa-address.PNG" alt="laptop-has-apipa-address" /></p>
+
+<h1 id="dhcp">DHCP</h1>
+
+<p><img src="/assets/Basic-1841-Config/1841-dhcp-settings.PNG" alt="1841-dhcp-settings" /></p>
+
+<h1 id="connecting-a-device">Connecting a Device</h1>
+<p><img src="/assets/Basic-1841-Config/laptop-has-ip-address-cannot-ping-google.PNG" alt="laptop-has-ip-address-cannot-ping-google" /></p>
+
+<h1 id="network-address-translation">Network Address Translation</h1>
+<p><img src="/assets/Basic-1841-Config/1841-NAT-settings.PNG" alt="1841-NAT-settings" /></p>
+
+<p><img src="/assets/Basic-1841-Config/laptop-ping-now-works.PNG" alt="laptop-ping-now-works" /></p>
+
+<h1 id="references">References</h1>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://community.spiceworks.com/how_to/86061-configuring-a-cisco-1841-router-from-scratch">How to: Configuring a Cisco 1841 router from scratch</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="Networking" /><summary type="html"><![CDATA[I followed instructions I found for doing this in a Spiceworks How-to article1. The instructions were missing the initial “enable” command, I needed to change the router IP to my router’s IP, and there was also a typo of “access list” instead of “access-list”. All of the screenshots are from completing this in my home lab, but I was just following someone’s instructions. This is just a start though, so expect to see some real home grown IT lab content in the future! [How to: Configuring a Cisco 1841 router from scratch][link-name] &#8617;]]></summary></entry><entry><title type="html">Console Connection to Sophos Firewall and Cisco Switch</title><link href="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html" rel="alternate" type="text/html" title="Console Connection to Sophos Firewall and Cisco Switch" /><published>2023-11-07T14:36:06-08:00</published><updated>2023-11-07T14:36:06-08:00</updated><id>http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection</id><content type="html" xml:base="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"><![CDATA[<!--- 
+
+<a href="http://10.10.10.12/?button1on" target = "_blank_">Turn Off LED</a>
+<a href="http://10.10.10.12/?button1off" target = "_blank">Turn On LED</a>
+
+
+<a href="http://10.10.10.12/?button1on" onclick = "return false">Turn Off LED</a>
+<a href="http://10.10.10.12/?button1off" onclick = "return false">Turn On LED</a>
+
+<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()">Click me</button>
+
+doesn't work
+<a href="http://10.10.10.12/?button1on" onclick="return false">Turn On Led</a> 
+<a href="http://10.10.10.12/?button1off" onclick="return false">Turn Off Led</a> 
+
+
+<a id="myLink" href="#" onclick="MyFunction();return false;">link text</a>
+
+
+
+<script>
+function URL() {
+    location.href = 'http://10.10.10.12/?button1off';
+}
+</script>
+<img src="http://10.10.10.11:8081/" alt="http://10.10.10.11:8081/">
+-->
+
+<p><img src="http://103.211.181.50:8081/" alt="http://103.211.181.50:8081/" width="497" height="373" class="shrinkToFit" /></p>
+
+<p><button onclick="button1on()">Turn On</button>
+<button onclick="button1off()">Turn Off</button></p>
+
+<script>
+function button1on() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://103.211.181.50/?button1off/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+function button1off() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://103.211.181.50/?button1on/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+</script>
+
+<!---
+<script>
+function button1on() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://10.10.10.12/?button1off/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+function button1off() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://10.10.10.12/?button1on/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+</script>
+-->
+
+<p>http://10.10.10.12/?button1on
+http://10.10.10.12/?button1off</p>
+
+<h1 id="sophos-xg-135w">Sophos XG 135w</h1>
+<h1 id="dell-poweredge-r530">Dell PowerEdge R530</h1>
+<h1 id="cisco-1841-switch">Cisco 1841 Switch</h1>
+
+<h1 id="connecting-the-console-cable">Connecting the Console Cable</h1>
 <p>The picture below is from the Sophos documentation for setting up a serial connection with a console cable to a firewall<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <p><img src="/assets/Setting Up a Serial Connection/Sophos Labeled Ports.PNG" alt="Sophos Labeled Ports" /></p>
@@ -59,11 +184,24 @@
 
 <p><img src="/assets/Setting Up a Serial Connection/Firewall Network Settings.PNG" alt="Firewall Network Settings" /></p>
 
-<h4 id="references">References</h4>
+<h1 id="references">References</h1>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
       <p><a href="https://support.sophos.com/support/s/article/KB-000035769?language=en_US">Sophos Firewall: Set up a serial connection with a console cable</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="Firewall" /><summary type="html"><![CDATA[Connecting the Console Cable The picture below is from the Sophos documentation for setting up a serial connection with a console cable to a firewall1. [Sophos Firewall: Set up a serial connection with a console cable][link-name] &#8617;]]></summary></entry></feed>
+</div>]]></content><author><name></name></author><category term="Networking" /><summary type="html"><![CDATA[&lt;!—]]></summary></entry><entry><title type="html">TEMPLATE_TITLE</title><link href="http://localhost:4000/category/name/2020/11/10/TEMPLATE-COPY-FROM-copy.html" rel="alternate" type="text/html" title="TEMPLATE_TITLE" /><published>2020-11-10T13:38:00-08:00</published><updated>2020-11-10T13:38:00-08:00</updated><id>http://localhost:4000/category/name/2020/11/10/TEMPLATE-COPY-FROM%20copy</id><content type="html" xml:base="http://localhost:4000/category/name/2020/11/10/TEMPLATE-COPY-FROM-copy.html"><![CDATA[<h1 id="citation-example">Citation Example</h1>
+<p><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<h1 id="picture-example">Picture Example</h1>
+<p><img src="/assets/Basic-1841-Config/1841-hostname.PNG" alt="1841-hostname" /></p>
+
+<h1 id="reference-example">Reference Example</h1>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://WEBSITE_ADDRESS.COM">NAME OF TITLE</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="Category" /><category term="Name" /><summary type="html"><![CDATA[Citation Example 1 [NAME OF TITLE][link-name] &#8617;]]></summary></entry></feed>

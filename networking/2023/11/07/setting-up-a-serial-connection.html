@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Console Connection to Sophos Firewall and Cisco Switch | Dave Loves Tech</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Console Connection to Sophos Firewall and Cisco Switch" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&lt;!—" />
+<meta property="og:description" content="&lt;!—" />
+<link rel="canonical" href="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html" />
+<meta property="og:url" content="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html" />
+<meta property="og:site_name" content="Dave Loves Tech" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-07T14:36:06-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Console Connection to Sophos Firewall and Cisco Switch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-07T14:36:06-08:00","datePublished":"2023-11-07T14:36:06-08:00","description":"&lt;!—","headline":"Console Connection to Sophos Firewall and Cisco Switch","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"},"url":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dave Loves Tech" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Dave Loves Tech</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Console Connection to Sophos Firewall and Cisco Switch</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-11-07T14:36:06-08:00" itemprop="datePublished">Nov 7, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--- 
+
+<a href="http://10.10.10.12/?button1on" target = "_blank_">Turn Off LED</a>
+<a href="http://10.10.10.12/?button1off" target = "_blank">Turn On LED</a>
+
+
+<a href="http://10.10.10.12/?button1on" onclick = "return false">Turn Off LED</a>
+<a href="http://10.10.10.12/?button1off" onclick = "return false">Turn On LED</a>
+
+<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()">Click me</button>
+
+doesn't work
+<a href="http://10.10.10.12/?button1on" onclick="return false">Turn On Led</a> 
+<a href="http://10.10.10.12/?button1off" onclick="return false">Turn Off Led</a> 
+
+
+<a id="myLink" href="#" onclick="MyFunction();return false;">link text</a>
+
+
+
+<script>
+function URL() {
+    location.href = 'http://10.10.10.12/?button1off';
+}
+</script>
+<img src="http://10.10.10.11:8081/" alt="http://10.10.10.11:8081/">
+-->
+
+<p><img src="http://103.211.181.50:8081/" alt="http://103.211.181.50:8081/" width="497" height="373" class="shrinkToFit" /></p>
+
+<p><button onclick="button1on()">Turn On</button>
+<button onclick="button1off()">Turn Off</button></p>
+
+<script>
+function button1on() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://103.211.181.50/?button1off/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+function button1off() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://103.211.181.50/?button1on/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+</script>
+
+<!---
+<script>
+function button1on() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://10.10.10.12/?button1off/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+function button1off() {
+   //Ajax call here
+   var xhReq = new XMLHttpRequest();
+   xhReq.open("GET", "http://10.10.10.12/?button1on/on:80", false);
+   xhReq.send(null);
+   var serverResponse = xhReq.responseText;
+}
+</script>
+-->
+
+<p>http://10.10.10.12/?button1on
+http://10.10.10.12/?button1off</p>
+
+<h1 id="sophos-xg-135w">Sophos XG 135w</h1>
+<h1 id="dell-poweredge-r530">Dell PowerEdge R530</h1>
+<h1 id="cisco-1841-switch">Cisco 1841 Switch</h1>
+
+<h1 id="connecting-the-console-cable">Connecting the Console Cable</h1>
+<p>The picture below is from the Sophos documentation for setting up a serial connection with a console cable to a firewall<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Sophos Labeled Ports.PNG" alt="Sophos Labeled Ports" /></p>
+
+<p>I have used a USB to RJ45 Console Cable to connect the Console port to my computer.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/USB Console Cable.jpg" alt="USB Console Cable" /></p>
+
+<h1 id="determing-com-port-number">Determing COM Port Number</h1>
+<p>The PuTTY Configuration settings will require the COM Port number. This information can be found within Device Manager &gt; Ports. It is the COM Port number associated with the USB-to-Serial Comm Port device.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Device Manager.PNG" alt="Device Manager" /></p>
+
+<h1 id="putty-configuration">PuTTY Configuration</h1>
+<p>9600 is a common Baud Speed, but it is important to check the documentation for the device that you are trying to connect to. In my case, the Sophos XG 135w Firewall uses a Baud Speed of 38400<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting Name</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COM Port Number</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Baud Speed</td>
+      <td>38400</td>
+    </tr>
+    <tr>
+      <td>Data bits</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Stop bits</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Parity</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Flow Control</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Also, the default Flow Control setting for my PuTTY instance was XON/XOFF and I needed to update that to “None” as per the documentation. Outside of that the default PuTTY settings did not need to be changed.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/PuTTY Serial Configuration.PNG" alt="PuTTY Serial Configuration" /></p>
+
+<h1 id="checking-network-settings">Checking Network Settings</h1>
+<p>The screenshot below is of the current Network Settings for this device. This Sophos was recently reset, so I was able to sign in with the default admininistrator password of “admin”. From there, I made the selection of Network Configuration &gt; Interface Configuration to get the screenshot.</p>
+
+<p><img src="/assets/Setting Up a Serial Connection/Firewall Network Settings.PNG" alt="Firewall Network Settings" /></p>
+
+<h1 id="references">References</h1>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://support.sophos.com/support/s/article/KB-000035769?language=en_US">Sophos Firewall: Set up a serial connection with a console cable</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/networking/2023/11/07/setting-up-a-serial-connection.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dave Loves Tech</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dave Loves Tech</li><li><a class="u-email" href="mailto:email@daveloves.tech">email@daveloves.tech</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/davelovestech"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">davelovestech</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is a temporary description!</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
