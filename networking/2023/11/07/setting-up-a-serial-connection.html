@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Console Connection to Sophos Firewall and Cisco Switch" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="&lt;!—" />
-<meta property="og:description" content="&lt;!—" />
+<meta name="description" content="This is a temporary description!" />
+<meta property="og:description" content="This is a temporary description!" />
 <link rel="canonical" href="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html" />
 <meta property="og:url" content="http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html" />
 <meta property="og:site_name" content="Dave Loves Tech" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Console Connection to Sophos Firewall and Cisco Switch" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-07T14:36:06-08:00","datePublished":"2023-11-07T14:36:06-08:00","description":"&lt;!—","headline":"Console Connection to Sophos Firewall and Cisco Switch","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"},"url":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-07T14:36:06-08:00","datePublished":"2023-11-07T14:36:06-08:00","description":"This is a temporary description!","headline":"Console Connection to Sophos Firewall and Cisco Switch","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"},"url":"http://localhost:4000/networking/2023/11/07/setting-up-a-serial-connection.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dave Loves Tech" /></head>
 <body><header class="site-header" role="banner">
@@ -47,36 +47,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--- 
-
-<a href="http://10.10.10.12/?button1on" target = "_blank_">Turn Off LED</a>
-<a href="http://10.10.10.12/?button1off" target = "_blank">Turn On LED</a>
-
-
-<a href="http://10.10.10.12/?button1on" onclick = "return false">Turn Off LED</a>
-<a href="http://10.10.10.12/?button1off" onclick = "return false">Turn On LED</a>
-
-<button onclick="myFunction()">Click me</button>
-<button onclick="myFunction()">Click me</button>
-
-doesn't work
-<a href="http://10.10.10.12/?button1on" onclick="return false">Turn On Led</a> 
-<a href="http://10.10.10.12/?button1off" onclick="return false">Turn Off Led</a> 
-
-
-<a id="myLink" href="#" onclick="MyFunction();return false;">link text</a>
-
-
-
-<script>
-function URL() {
-    location.href = 'http://10.10.10.12/?button1off';
-}
-</script>
-<img src="http://10.10.10.11:8081/" alt="http://10.10.10.11:8081/">
--->
-
-<p><img src="http://103.211.181.50:8081/" alt="http://103.211.181.50:8081/" width="497" height="373" class="shrinkToFit" /></p>
+    <p><img src="http://103.211.181.50:8081/" alt="http://103.211.181.50:8081/" width="497" height="373" class="shrinkToFit" /></p>
 
 <p><button onclick="button1on()">Turn On</button>
 <button onclick="button1off()">Turn Off</button></p>
@@ -85,40 +56,18 @@ function URL() {
 function button1on() {
    //Ajax call here
    var xhReq = new XMLHttpRequest();
-   xhReq.open("GET", "http://103.211.181.50/?button1off/on:80", false);
+   xhReq.open("GET", "http://103.211.181.50/?button1off/on:9001", false);
    xhReq.send(null);
    var serverResponse = xhReq.responseText;
 }
 function button1off() {
    //Ajax call here
    var xhReq = new XMLHttpRequest();
-   xhReq.open("GET", "http://103.211.181.50/?button1on/on:80", false);
+   xhReq.open("GET", "http://103.211.181.50/?button1on/on:9001", false);
    xhReq.send(null);
    var serverResponse = xhReq.responseText;
 }
 </script>
-
-<!---
-<script>
-function button1on() {
-   //Ajax call here
-   var xhReq = new XMLHttpRequest();
-   xhReq.open("GET", "http://10.10.10.12/?button1off/on:80", false);
-   xhReq.send(null);
-   var serverResponse = xhReq.responseText;
-}
-function button1off() {
-   //Ajax call here
-   var xhReq = new XMLHttpRequest();
-   xhReq.open("GET", "http://10.10.10.12/?button1on/on:80", false);
-   xhReq.send(null);
-   var serverResponse = xhReq.responseText;
-}
-</script>
--->
-
-<p>http://10.10.10.12/?button1on
-http://10.10.10.12/?button1off</p>
 
 <h1 id="sophos-xg-135w">Sophos XG 135w</h1>
 <h1 id="dell-poweredge-r530">Dell PowerEdge R530</h1>
